@@ -8,6 +8,18 @@
   </head>
   <body>
     <h1>Khoj The Search</h1>
-    <input type="search" />
+    <form action="/check" method="POST">
+      <label for="input">Input Values:</label><br>
+      <input type="text" id="input" name="input"><br>
+      
+      <label for="random">Search Values:</label><br>
+      <input type="number" id="random" name="random"><br>
+      
+      <button type="submit">Khoj</button>
+    </form>
+    
+    <% if (typeof result !== 'undefined') { %>
+      <h2>Result: <%= result ? 'True' : 'False' %></h2>
+    <% } %>
   </body>
 </html>

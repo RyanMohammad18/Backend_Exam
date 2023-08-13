@@ -23,6 +23,21 @@ const LoginSchema = new mongoose.Schema({
     }
 })
 
-const collection = new mongoose.model("Collection-1",LoginSchema)
+const Inputschema = new mongoose.Schema({
 
-module.exports= collection
+    input:{
+        type : String,
+        required:[true,"Please enter your values"]
+
+    }
+
+})
+
+const collection = new mongoose.model("Collection-1",LoginSchema)
+const collection2 = new mongoose.model("Collection-2",Inputschema)
+
+
+module.exports = {
+    collection,
+    collection2
+};
