@@ -7,19 +7,30 @@
     <title>Home</title>
   </head>
   <body>
-    <h1>Khoj The Search</h1>
-    <form action="/check" method="POST">
-      <label for="input">Input Values:</label><br>
-      <input type="text" id="input" name="input"><br>
-      
-      <label for="random">Search Values:</label><br>
-      <input type="number" id="random" name="random"><br>
-      
-      <button type="submit">Khoj</button>
-    </form>
+    <h1>KHOJ, the search page</h1>
+    <div class="wrapper">
+     
+
+      <form action="/check" method="POST">
+        <div class="field">
+          <input type="text" id="input" name="input" placeholder="Enter your Values"/>
+
+       
+        </div>
+        <div class="field">
+          <input type="number" id="random" name="random" placeholder="Enter Search number"/>
+        </div>
+        <div class="field">
+          <button type="submit" class="khoj">Khoj</button>
+        </div>
+      </form>
+
     
-    <% if (typeof result !== 'undefined') { %>
-      <h2>Result: <%= result ? 'True' : 'False' %></h2>
-    <% } %>
+    </div>
+    <div class="rslt">
+      <% if (typeof result !== 'undefined') { %>
+        <h2>Result: <%= result ? 'True' : 'False' %></h2>
+        <% } %>
+    </div>
   </body>
 </html>
