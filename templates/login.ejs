@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="/login.css">
   </head>
   <body>
+
+    <% if (signupMessage) { %>
+      <div class="success-message">You have successfully signed up! Now log in.</div>
+    <% } %>
     <div class="wrapper">
       <div class="title">Login Form</div>
       <form action="/login" method="post">
